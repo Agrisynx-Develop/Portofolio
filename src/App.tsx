@@ -1,7 +1,3 @@
-/**
- * @license
- * SPDX-License-Identifier: Apache-2.0
- */
 
 import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
@@ -9,7 +5,7 @@ import {
   Menu, X, Github, Linkedin, Mail, ExternalLink, 
   Code2, Database, Layout, Smartphone, Palette, 
   ChevronRight, Calendar, User, Download, Send, 
-  Trash2, Search, Briefcase, GraduationCap, ArrowUp
+  Trash2, Search,Users, Wrench, Briefcase, GraduationCap, ArrowUp
 } from 'lucide-react';
 import { cn } from './lib/utils';
 
@@ -18,104 +14,118 @@ import { cn } from './lib/utils';
 const PROJECTS = [
   {
     id: 1,
-    title: "NexGen E-Commerce",
-    category: "Web",
-    description: "A high-performance modern store built with Next.js 14 and Stripe integration.",
-    longDescription: "NexGen is a fully featured e-commerce platform focusing on performance and user experience. It features server-side rendering, real-time inventory updates, and a seamless checkout flow.",
-    tech: ["Next.js", "TypeScript", "Tailwind", "Stripe"],
-    image: "https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80&w=800",
-    github: "https://github.com",
-    demo: "https://demo.com"
-  },
-  {
-    id: 2,
-    title: "DevTracker Mobile",
-    category: "Mobile",
-    description: "Personal task and calorie tracking app for developers.",
-    longDescription: "An application designed specifically for developers to manage their project deadlines alongside their health goals. Built with React Native for cross-platform support.",
-    tech: ["React Native", "Firebase", "Redux"],
-    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=800",
-    github: "https://github.com",
-    demo: "https://demo.com"
-  },
-  {
-    id: 3,
-    title: "CloudScale API",
-    category: "API",
-    description: "Scalable microservices architecture for data processing.",
-    longDescription: "A robust API backbone designed to handle millions of requests, utilizing a distributed architecture for horizontal scaling and reliability.",
-    tech: ["Node.js", "Express", "PostgreSQL", "Docker"],
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc4b?auto=format&fit=crop&q=80&w=800",
-    github: "https://github.com",
-    demo: "https://demo.com"
-  },
-  {
-    id: 4,
-    title: "EcoSmart Dashboard",
-    category: "UI",
-    description: "Visualization dashboard for IoT environmental sensors.",
-    longDescription: "A real-time monitoring interface for environmental data. Features interactive charts, map integration, and predictive analysis models.",
-    tech: ["React", "D3.js", "Material UI", "IoT"],
-    image: "https://images.unsplash.com/photo-1551288049-bb8c803f293a?auto=format&fit=crop&q=80&w=800",
-    github: "https://github.com",
-    demo: "https://demo.com"
-  },
-  {
-    id: 5,
-    title: "SecurePass Manager",
-    category: "Web",
-    description: "Encrypted password manager with cross-device sync.",
-    longDescription: "A security-first application for managing credentials. Uses end-to-end encryption with AES-256 and features an automatic breach detection system.",
-    tech: ["React", "Go", "SQLite", "Crypto"],
-    image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800",
-    github: "https://github.com",
-    demo: "https://demo.com"
-  },
-  {
-    id: 6,
-    title: "FinTech Insight",
-    category: "Web",
-    description: "Real-time stock analysis platform with AI integration.",
-    longDescription: "A comprehensive platform for financial analysis, integrating OpenAI for sentiment news analysis and technical indicator calculation.",
-    tech: ["React", "Gemini API", "Python", "Flask"],
-    image: "https://images.unsplash.com/photo-1611974714851-eb605161ca50?auto=format&fit=crop&q=80&w=800",
-    github: "https://github.com",
-    demo: "https://demo.com"
+    title: "EggRow",
+    category: "Data Analytics System",
+    description: "A data-driven decision support system for poultry farm management.",
+    longDescription: "EggRow is a data-driven analytics system designed to support decision-making in poultry farming. The system provides production monitoring, performance analysis (FCR, HDP), and interactive dashboards to help optimize farm operations. Built using Python and Streamlit, it enables users to visualize data, evaluate efficiency, and make informed business decisions.",
+    tech: ["Python", "Streamlit", "Data Analysis", "Machine Learning"],
+    image: "https://images.unsplash.com/photo-1598514982845-5f6f3d1c0f0b?auto=format&fit=crop&q=80&w=800",
+    github: "https://github.com/Agrisynx-Develop/Eggrow-Analyst.git", // kalau ada repo khusus ganti
+    demo: "https://eggrow.streamlit.app/"
   }
 ];
 
 const EXPERIENCE = [
+
   {
     id: 1,
-    role: "Senior Fullstack Developer",
-    company: "TechInova Solutions",
-    duration: "2022 - Present",
+    role: "Independent Study (eggrow developer)",
+    company: "Faculty of Animal Science - MBKM program",
+    duration: "Feb 2026 - May 2026",
     achievements: [
-      "Led a team of 5 developers to rebuild the core SaaS platform, increasing performance by 40%.",
-      "Implemented a new CI/CD pipeline reducing deployment time from 2 hours to 15 minutes.",
-      "Developed an internal AI-assisted coding tool using Gemini API."
+      "Developed a data-driven analytical system for poultry farm management",
+      "Built interactive dashboards using Python and Streamlit",
+      "Designed a digital farm management system to support operations",
+      "Applied statistical analysis to evaluate production performance",
+      "Utilized data science methods to improve operational decision-making"
     ]
   },
   {
     id: 2,
-    role: "Frontend Developer",
-    company: "Creative Digital Agency",
-    duration: "2020 - 2022",
+    role: "Data Science Trainee",
+    company: "Celerates Indonesia",
+    duration: "Feb 2026 - Jul 2026",
     achievements: [
-      "Delivered 20+ responsive web applications for international clients.",
-      "Optimized frontend bundle size by 30% through code-splitting and tree-shaking.",
-      "Mentored 3 junior developers in modern React practices."
+      "Learned data science fundamentals including NLP and statistical analysis",
+      "Utilized Python, Git, and Streamlit for data processing and visualization",
+      "Applied machine learning and deep learning techniques",
+      "Explored generative AI, prompt engineering, and advanced techniques",
+      "Developed AI applications using LangChain and Retrieval-Augmented Generation (RAG)"
     ]
   },
   {
     id: 3,
-    role: "Junior Web Developer",
-    company: "Startup Hub",
-    duration: "2018 - 2020",
+    role: "Technical Manager",
+    company: "Marching Band UGM",
+    duration: "Jan 2025 - Nov 2025",
     achievements: [
-      "Assisted in developing a real-time collaboration tool.",
-      "Improved database query efficiency by 25% for high-traffic endpoints.",
-      "Gained deep expertise in CSS-in-JS and state management."
+      "Led and managed major organizational programs and technical execution",
+      "Developed structured training plans and schedules",
+      "Acted as project manager for the main annual program",
+      "Handled HR-related issues across multiple teams",
+      "Played a strategic role in executing large-scale events"
+    ]
+  },
+  {
+    id: 4,
+    role: "Marching Band Coach",
+    company: "Marching Band UGM",
+    duration: "Mar 2024 - Nov 2025",
+    achievements: [
+      "Developed annual program themes and technical training materials",
+      "Designed technical plans for major events",
+      "Enhanced players’ technical skills and team performance",
+      "Built strong team cohesion and collaboration",
+      "Coordinated with multiple divisions for event execution"
+    ]
+  },
+  {
+    id: 5,
+    role: "Technical Coordinator",
+    company: "Marching Band UGM",
+    duration: "Jul 2023 - Feb 2025",
+    achievements: [
+      "Guided technical staff in training sessions",
+      "Prepared training materials and regeneration programs",
+      "Built team cohesion among staff and new members",
+      "Resolved HR-related challenges within the team",
+      "Led and evaluated training program implementation"
+    ]
+  },
+  {
+    id: 6,
+    role: "Equipment Staff",
+    company: "Marching Band UGM",
+    duration: "Mar 2023 - Dec 2023",
+    achievements: [
+      "Managed inventory of costumes, instruments, and equipment",
+      "Coordinated logistics including transportation and accommodation",
+      "Performed maintenance and repair of equipment",
+      "Prepared technical equipment for major events"
+    ]
+  },
+  {
+    id: 7,
+    role: "Leader",
+    company: "Rythmic Charolais",
+    duration: "Jan 2024 - Dec 2024",
+    achievements: [
+      "Led and managed team activities for organizational events",
+      "Coordinated with internal and external stakeholders",
+      "Monitored and controlled event execution",
+      "Ensured organizational sustainability and development"
+    ]
+  },
+  {
+    id: 8,
+    role: "Accounting Support Intern",
+    company: "PT. JTEKT Indonesia",
+    duration: "Dec 2019 - Mar 2020",
+    achievements: [
+      "Managed invoices and supported Account Officer processes",
+      "Prepared purchase orders and financial documentation",
+      "Organized and archived financial records",
+      "Assisted in administrative tasks and month-end closing"
     ]
   }
 ];
@@ -123,17 +133,17 @@ const EXPERIENCE = [
 const EDUCATION = [
   {
     id: 1,
-    degree: "S1 Teknik Informatika",
-    institution: "Universitas Indonesia",
-    year: "2014 - 2018",
-    highlight: "Lulus dengan IPK 3.85, fokus pada Rekayasa Perangkat Lunak."
+    degree: "S1 Ilmu dan Industri Peternakan",
+    institution: "Universitas Gadjah Mada",
+    year: "2022 - 2026",
+    highlight: "Lulus dengan IPK 3.41"
   },
   {
     id: 2,
-    degree: "Nanodegree Fullstack Web",
-    institution: "Udacity",
-    year: "2019",
-    highlight: "Intensive training on Python, React, and Database Management."
+    degree: "Data Science & Generative AI",
+    institution: "Celerates",
+    year: "2026",
+    highlight: "Intensive training on Data Science, Machine Learning, Deep Learning, Prompting, Project and Database Management."
   }
 ];
 
@@ -318,17 +328,16 @@ export default function App() {
             </div>
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6">
               Teguh Guntoro
-              <span className="block text-accent-cyan mt-2">Fullstack Developer</span>
+              <span className="block text-accent-cyan mt-2">Website Portofolio</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-400 mb-10 leading-relaxed max-w-2xl mx-auto">
-              Membangun solusi digital modern dengan fokus pada performa, 
-              estetika, dan pengalaman pengguna yang seamless.
+              Open To Work | Data Analyst & Data Science Enthusiast | Animal Science Background
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a href="#portofolio" className="btn-primary w-full sm:w-auto flex items-center justify-center gap-2">
                 Lihat Portofolio <ChevronRight size={18} />
               </a>
-              <a href="/dummy-cv.pdf" download className="btn-outline w-full sm:w-auto flex items-center justify-center gap-2">
+              <a href="/CV-Teguh Guntoro-new.pdf" download className="btn-outline w-full sm:w-auto flex items-center justify-center gap-2">
                 Download CV <Download size={18} />
               </a>
             </div>
@@ -338,26 +347,37 @@ export default function App() {
 
       {/* --- TENTANG --- */}
       <Section id="tentang" title="Tentang Saya">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+
+          {/* FOTO */}
+          <div className="flex justify-center">
+            <img
+              src="/foto.jpeg"
+              alt="Teguh Guntoro"
+              className="w-64 h-64 object-cover rounded-2xl shadow-lg"
+            />
+          </div>
+
+        
           <div className="space-y-6">
             <p className="text-lg text-gray-400 leading-relaxed">
-              Saya adalah seorang Fullstack Developer dengan pengalaman lebih dari 5 tahun 
-              dalam merancang dan mengembangkan aplikasi web skala besar. Saya senang 
-              memecahkan masalah teknis yang kompleks dan mengubahnya menjadi antarmuka 
-              yang elegan.
+              Undergraduate in Animal Science with strong analytical thinking and leadership experience. 
+              Experienced in developing data-driven systems, managing cross-functional teams, and applying 
+              data analytics to support operational and business decision-making. Passionate about continuous
+              improvement, problem-solving, and contributing to business growth.
+              
             </p>
             <p className="text-lg text-gray-400 leading-relaxed">
-              Keahlian saya mencakup seluruh lifecycle pengembangan perangkat lunak, 
-              mulai dari perencanaan arsitektur, pengembangan sistem backend, 
-              hingga optimasi performa frontend.
+              My expertise includes data analysis, problem-solving, and 
+              developing data-driven solutions to support decision-making 
+              and improve operational efficiency.
             </p>
 
             <div className="grid grid-cols-2 gap-6 pt-6">
               {[
-                { label: 'Proyek Selesai', value: '40+' },
-                { label: 'Pengalaman', value: '5+ Tahun' },
-                { label: 'Client Puas', value: '100%' },
-                { label: 'Jam Ngoding', value: '10k+' },
+                { label: 'Proyek Selesai', value: '2' },
+                
+                { label: 'Jam Ngoding', value: '4k+' },
               ].map((stat, i) => (
                 <div key={i} className="card-gradient p-6 rounded-2xl">
                   <h3 className="text-3xl font-bold text-accent-cyan mb-1">{stat.value}</h3>
@@ -369,10 +389,10 @@ export default function App() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {[
-              { icon: <Layout className="text-accent-cyan" />, title: 'Frontend', skills: ['React', 'Next.js', 'Tailwind', 'Framermotion'] },
-              { icon: <Database className="text-accent-cyan" />, title: 'Backend', skills: ['Node.js', 'Go', 'Python', 'PostgreSQL'] },
-              { icon: <Smartphone className="text-accent-cyan" />, title: 'Mobile', skills: ['React Native', 'Expo', 'Mobile UI Design'] },
-              { icon: <Code2 className="text-accent-cyan" />, title: 'Tools', skills: ['Docker', 'Git', 'AWS', 'Figma'] },
+              { icon: <Database className="text-accent-cyan" />, title: 'Data Analysis', skills: ['Python', 'Statistical Analysis', 'Data Visualization', 'Machine Learning'] },
+              { icon: <Code2 className="text-accent-cyan" />, title: 'Problem Solving', skills: ['Analytical Thinking', 'Decision Making', 'Process Improvement'] },
+              { icon: <Users className="text-accent-cyan" />, title: 'Leadership', skills: ['Team Management', 'Project Coordination', 'Communication'] },
+              { icon: <Wrench className="text-accent-cyan" />, title: 'Tools', skills: ['Python', 'Streamlit', 'Git', 'Excel'] },
             ].map((cat, i) => (
               <div key={i} className="card-gradient p-6 rounded-2x">
                 <div className="p-3 bg-accent-cyan/10 rounded-xl w-fit mb-4">
@@ -538,8 +558,8 @@ export default function App() {
               </a>
               <div className="flex gap-4">
                 {[
-                  { icon: <Linkedin />, label: 'LinkedIn', href: 'https://linkedin.com' },
-                  { icon: <Github />, label: 'GitHub', href: 'https://github.com' },
+                  { icon: <Linkedin />, label: 'LinkedIn', href: 'http://linkedin.com/in/teguh-guntoro' },
+                  { icon: <Github />, label: 'GitHub', href: 'https://github.com/Agrisynx-Develop' },
                 ].map((social, i) => (
                   <a key={i} href={social.href} className="flex-1 flex items-center justify-center gap-2 p-4 rounded-2xl bg-dark-surface border border-border-subtle hover:border-accent-cyan transition-all text-white group">
                     <span className="group-hover:text-accent-cyan">{social.icon}</span>
