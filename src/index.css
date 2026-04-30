@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dark-bg: #0B0F17;
+  --color-dark-surface: #111827;
+  --color-accent-cyan: #22D3EE;
+  --color-accent-cyan-dark: #0891B2;
+  --color-border-subtle: rgba(255, 255, 255, 0.08);
+  
+  --font-sans: "Plus Jakarta Sans", "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-dark-bg text-gray-200 antialiased selection:bg-accent-cyan/30 selection:text-white;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply py-20 px-6 lg:px-12 max-w-7xl mx-auto;
+  }
+
+  .card-gradient {
+    background: linear-gradient(145deg, rgba(17, 24, 39, 0.6) 0%, rgba(13, 18, 30, 0.9) 100%);
+    border: 1px solid var(--color-border-subtle);
+  }
+
+  .glass-nav {
+    background: rgba(11, 15, 23, 0.8);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--color-border-subtle);
+  }
+
+  .btn-primary {
+    @apply px-6 py-3 rounded-xl bg-accent-cyan text-dark-bg font-semibold transition-all hover:bg-accent-cyan/90 hover:scale-[1.02] active:scale-95 shadow-lg shadow-accent-cyan/20 cursor-pointer;
+  }
+
+  .btn-outline {
+    @apply px-6 py-3 rounded-xl border border-border-subtle hover:bg-white/5 transition-all text-gray-300 active:scale-95 cursor-pointer;
+  }
+
+  .tech-badge {
+    @apply px-3 py-1 rounded-full bg-accent-cyan/10 border border-accent-cyan/20 text-accent-cyan text-xs font-medium;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-dark-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1F2937;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #374151;
+}
+
+/* Decoration elements */
+.tech-glow {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.07) 0%, rgba(34, 211, 238, 0) 70%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.grid-bg {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+}
