@@ -256,8 +256,8 @@ export default function App() {
       <nav className="fixed top-0 w-full z-50 glass-nav">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <a href="#home" className="text-2xl font-bold tracking-tighter text-white flex items-center gap-2">
-            <span className="w-8 h-8 bg-accent-cyan rounded-lg flex items-center justify-center text-dark-bg">T</span>
-            Guntoro
+            <span className="w-8 h-8 bg-accent-cyan rounded-lg flex items-center justify-center text-dark-bg">TEGUH</span>
+            GUNTORO
           </a>
 
           {/* Desktop Nav */}
@@ -668,7 +668,7 @@ export default function App() {
       <footer className="border-t border-border-subtle py-12 px-6">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
           <div>
-            <a href="#home" className="text-xl font-bold tracking-tighter text-white">T. Guntoro</a>
+            <a href="#home" className="text-xl font-bold tracking-tighter text-white">Teguh Guntoro</a>
             <p className="text-gray-500 text-sm mt-2">© 2026 Teguh Guntoro. All rights reserved.</p>
           </div>
           <div className="flex gap-8">
