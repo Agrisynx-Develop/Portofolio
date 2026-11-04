@@ -35,14 +35,29 @@ const PROJECTS = [
     longDescription: "Transformasi Manajemen Keuangan dengan AI & Analitik Data",
     tech: ["Python", "Streamlit", "Data Analysis", "Machine Learning"],
     image: "https://images.unsplash.com/photo-1598514982845-5f6f3d1c0f0b?auto=format&fit=crop&q=80&w=800",
-    demo: "https://huggingface.co/spaces/Rakha4523/smart-money-app"
+    demo: "https://huggingface.co/spaces/Rakha4523/smart-money-app",
+    ppt: "DSGA_Kelompok1.pdf"
   }
 ];
 
 const EXPERIENCE = [
 
-   {
+  {
     id: 1,
+    role: "Business Intellegence Analyst Bank Muamalat (Project based Intern)",
+    company: "Rakamin",
+    duration: "Okt 2026 - Nov 2026",
+    achievements: [
+      "Participated in a Project Based Internship as a Business Intelligence Analyst,", 
+      "learning how BI analysts work in the banking industry and completing a final project", 
+      "aligned with the company’s activities. Processed and analyzed data using Excel, MS Access,", 
+      "and MySQL (SQL), applied statistical analysis, and built data visualizations and BI dashboards",
+      "to support business decision-making. Work was assessed and given feedback by the Bank Muamalat team."
+      
+    ]
+  }, 
+  {
+    id: 2,
     role: "Management Trainee (SRAP)",
     company: "Suri Retail Nusantara",
     duration: "Jun 2026 - Sep 2026",
@@ -54,7 +69,7 @@ const EXPERIENCE = [
     ]
   },
   {
-    id: 2,
+    id: 3,
     role: "Independent Study (eggrow developer)",
     company: "Faculty of Animal Science - MBKM program",
     duration: "Feb 2026 - May 2026",
@@ -67,7 +82,7 @@ const EXPERIENCE = [
     ]
   },
   {
-    id: 3,
+    id: 4,
     role: "Data Science Trainee",
     company: "Celerates Indonesia",
     duration: "Feb 2026 - Jul 2026",
@@ -80,7 +95,7 @@ const EXPERIENCE = [
     ]
   },
   {
-    id: 3,
+    id: 5,
     role: "Technical Manager",
     company: "Marching Band UGM",
     duration: "Jan 2025 - Nov 2025",
@@ -93,8 +108,8 @@ const EXPERIENCE = [
     ]
   },
   {
-    id: 4,
-    role: "Marching Band Coach",
+    id: 6,
+    role: "Marching Band Trainer",
     company: "Marching Band UGM",
     duration: "Mar 2024 - Nov 2025",
     achievements: [
@@ -106,7 +121,7 @@ const EXPERIENCE = [
     ]
   },
   {
-    id: 5,
+    id: 7,
     role: "Technical Coordinator",
     company: "Marching Band UGM",
     duration: "Jul 2023 - Feb 2025",
@@ -119,7 +134,7 @@ const EXPERIENCE = [
     ]
   },
   {
-    id: 6,
+    id: 8,
     role: "Equipment Staff",
     company: "Marching Band UGM",
     duration: "Mar 2023 - Dec 2023",
@@ -131,7 +146,7 @@ const EXPERIENCE = [
     ]
   },
   {
-    id: 7,
+    id: 9,
     role: "Leader",
     company: "Rythmic Charolais",
     duration: "Jan 2024 - Dec 2024",
@@ -143,7 +158,7 @@ const EXPERIENCE = [
     ]
   },
   {
-    id: 8,
+    id: 10,
     role: "Accounting Support Intern",
     company: "PT. JTEKT Indonesia",
     duration: "Dec 2019 - Mar 2020",
@@ -713,7 +728,7 @@ export default function App() {
         </div>
       </footer>
 
-      {/* --- MODAL PROJECT --- */}
+           {/* --- MODAL PROJECT --- */}
       <AnimatePresence>
         {selectedProject && (
           <div className="fixed inset-0 z-[100] flex items-center justify-center p-6 bg-dark-bg/90 backdrop-blur-md">
@@ -749,14 +764,25 @@ export default function App() {
                   <p className="text-xl text-gray-400 leading-relaxed mb-10">
                     {selectedProject.longDescription}
                   </p>
-
+                  
                   <div className="flex flex-col sm:flex-row gap-4 border-t border-border-subtle pt-8">
-                    <a href={selectedProject.demo} target="_blank" rel="noreferrer" className="btn-primary flex items-center justify-center gap-2">
-                      <ExternalLink size={18} /> Live Preview
-                    </a>
-                    <a href={selectedProject.github} target="_blank" rel="noreferrer" className="btn-outline flex items-center justify-center gap-2">
-                      <Github size={18} /> Source Code
-                    </a>
+                    {selectedProject.demo && (
+                      <a href={selectedProject.demo} target="_blank" rel="noreferrer" className="btn-primary flex items-center justify-center gap-2">
+                        <ExternalLink size={18} /> Live Preview
+                      </a>
+                    )}
+
+                    {selectedProject.ppt && (
+                      <a href={selectedProject.ppt} target="_blank" rel="noreferrer" className="btn-outline flex items-center justify-center gap-2">
+                        <ExternalLink size={18} /> Lihat Presentasi
+                      </a>
+                    )}
+
+                    {selectedProject.github && (
+                      <a href={selectedProject.github} target="_blank" rel="noreferrer" className="btn-outline flex items-center justify-center gap-2">
+                        <Github size={18} /> Source Code
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
@@ -764,7 +790,6 @@ export default function App() {
           </div>
         )}
       </AnimatePresence>
-
       {/* --- BACK TO TOP --- */}
       <AnimatePresence>
         {showBackToTop && (
