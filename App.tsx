@@ -402,16 +402,27 @@ export default function App() {
         
           <div className="space-y-6">
             <p className="text-lg text-gray-400 leading-relaxed">
-              Undergraduate in Animal Science with strong analytical thinking and leadership experience. 
-              Experienced in developing data-driven systems, managing cross-functional teams, and applying 
-              data analytics to support operational and business decision-making. Passionate about continuous
-              improvement, problem-solving, and contributing to business growth.
+              Fresh Graduate in Animal Science and Industry at 
+              Universitas Gadjah Mada with a strong foundation 
+              in animal nutrition and agribusiness, 
+              skill in business analyst and data science. with 
+              data analysis skills (Python, SQL, Excel, Streamlit). 
+              Experienced in building interactive dashboards for 
+              production analysis and operational decision making (EggRow), 
+              and completed a Business Intelligence project for Bank Muamalat,
+              developing a digital user churn dashboard. 
               
             </p>
             <p className="text-lg text-gray-400 leading-relaxed">
-              My expertise includes data analysis, problem-solving, and 
-              developing data-driven solutions to support decision-making 
-              and improve operational efficiency.
+              Gained an understanding of supply chain 
+              and retail operations through a Management Trainee program. 
+              Experienced in designing and managing large scale programs, 
+              cross division coordination, and preparing materials and activity 
+              documentation through Marching Band UGM. 
+              A Computer & Network Engineering vocational high school graduate with internship
+              experience in a manufacturing company, enabling quick adaptation to industrial 
+              environments. Passionate about developing people, optimizing processes, data analyst, 
+              data science and contributing to business growth.
             </p>
 
             <div className="grid grid-cols-2 gap-6 pt-6">
