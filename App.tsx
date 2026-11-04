@@ -378,7 +378,7 @@ export default function App() {
               <a href="#portofolio" className="btn-primary w-full sm:w-auto flex items-center justify-center gap-2">
                 Lihat Portofolio <ChevronRight size={18} />
               </a>
-              <a href="/CV-Teguh Guntoro-new.pdf" download className="btn-outline w-full sm:w-auto flex items-center justify-center gap-2">
+              <a href="/CV_2026.pdf" download className="btn-outline w-full sm:w-auto flex items-center justify-center gap-2">
                 Download CV <Download size={18} />
               </a>
             </div>
