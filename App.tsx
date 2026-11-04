@@ -429,7 +429,7 @@ export default function App() {
               {[
                 { label: 'Proyek Selesai', value: '2' },
                 
-                { label: 'Jam Ngoding', value: '4k+' },
+                { label: 'Status', value: 'Fresh  Graduate' },
               ].map((stat, i) => (
                 <div key={i} className="card-gradient p-6 rounded-2xl">
                   <h3 className="text-3xl font-bold text-accent-cyan mb-1">{stat.value}</h3>
