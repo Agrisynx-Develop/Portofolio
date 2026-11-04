@@ -26,18 +26,40 @@ const PROJECTS = [
     image: "https://images.unsplash.com/photo-1598514982845-5f6f3d1c0f0b?auto=format&fit=crop&q=80&w=800",
     github: "https://github.com/Agrisynx-Develop/Eggrow-Analyst.git", // kalau ada repo khusus ganti
     demo: "https://eggrow.streamlit.app/"
+  },
+  {
+    id: 2,
+    title: "Smart Money",
+    category: "Data science & Generative AI",
+    description: "Team Project",
+    longDescription: "Transformasi Manajemen Keuangan dengan AI & Analitik Data",
+    tech: ["Python", "Streamlit", "Data Analysis", "Machine Learning"],
+    image: "https://images.unsplash.com/photo-1598514982845-5f6f3d1c0f0b?auto=format&fit=crop&q=80&w=800",
+    demo: "https://huggingface.co/spaces/Rakha4523/smart-money-app"
   }
 ];
 
 const EXPERIENCE = [
 
-  {
+   {
     id: 1,
+    role: "Management Trainee (SRAP)",
+    company: "Suri Retail Nusantara",
+    duration: "Jun 2026 - Sep 2026",
+    achievements: [
+      "Took part in the Suri Retail Acceleration Program, rotating through Supply Chain,", 
+      "Data Analyst, Product Development, Sales & Marketing, and Retail Operation.", 
+      "Analyzed operational data to identify bottlenecks and process inefficiencies,", 
+      "and prepared improvement recommendations."
+    ]
+  },
+  {
+    id: 2,
     role: "Independent Study (eggrow developer)",
     company: "Faculty of Animal Science - MBKM program",
     duration: "Feb 2026 - May 2026",
     achievements: [
-      "Developed a data-driven analytical system for poultry farm management",
+      "Developed a data driven analytical system for poultry farm management",
       "Built interactive dashboards using Python and Streamlit",
       "Designed a digital farm management system to support operations",
       "Applied statistical analysis to evaluate production performance",
@@ -45,7 +67,7 @@ const EXPERIENCE = [
     ]
   },
   {
-    id: 2,
+    id: 3,
     role: "Data Science Trainee",
     company: "Celerates Indonesia",
     duration: "Feb 2026 - Jul 2026",
